@@ -14,7 +14,7 @@ Technologies to be used
 ![NLTK](https://img.shields.io/badge/NLTK-toolkit-lightgrey)
 
 
-# steps to follow 
+# Steps to Follow 
 1. Corpus Building 
     There are presently no corpuses that could meet this studies requirements, that’s why starting from the begining could be a plus
 2. Target Selection 
@@ -28,3 +28,5 @@ Technologies to be used
         Relevent Tweets/posts 
         removing urls/emoticons/hashtags etc
         Refining the data
+
+.readme #tm_webpreview_header {color:#000; display: none;}
