@@ -11,7 +11,7 @@ Technologies to be used
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
 ![Web Scrapper](https://img.shields.io/badge/web%20Scrapper-scrapping-blue)
-
+![NLTK-toolkit] (https://img.shields.io/badge/NLTK-toolkit-lightgrey)
 
 
 # steps to follow 
