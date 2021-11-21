@@ -28,3 +28,17 @@
         - Relevent Tweets/posts 
         - removing urls/emoticons/hashtags etc
         - Refining the data
+
+### Proposed Methodology 
+
+1. Training the Data
+2. Preprocessing
+3. Tf-Idf
+    - Algorithms (yet to decide)
+        - Traning Labels 
+        - Baseline model
+            - Test data 
+            - Label Predictions 
+                - Result validations 
+                    - Test lables 
+                    - Final results
