@@ -1,5 +1,5 @@
 # Started new project on 21/11/2021
-## The idea is to create a hatespeech detection in URDU language 
+> The idea is to create a new hate speech detection in roman URDU language, that could out perform current systems out there.
 
 ### Technologies to be used
 
@@ -26,7 +26,7 @@
 4. Data collection
     - Selected Keywords from Twitter and Facebook
         - Relevent Tweets/posts 
-        - removing urls/emoticons/hashtags etc
+        - removing unnecessary data like urls,hashtags etc
         - Refining the data
 
 ### Proposed Methodology 
