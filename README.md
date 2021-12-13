@@ -57,9 +57,6 @@
 
 
 The focus of this study:
- Devlop a benchmark corpus that can be used for the identification of hateful content.
- 
- There are no generic and standardized guidelines that can be used to detect hatespeech in urdu language.
- 
- There is a dire absence of hatespeech dataset in Roman-Urdu dataset, there are few but they are either extracted from hindi datasets or the data is too low to be used to training purposes
- 
+* Devlop a benchmark corpus that can be used for the identification of hateful content.
+* There are no generic and standardized guidelines that can be used to detect hatespeech in urdu language.
+* There is a dire absence of hatespeech dataset in Roman-Urdu dataset, there are few but they are either extracted from hindi datasets or the data is too low to be used to training purposes
