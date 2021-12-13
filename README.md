@@ -42,3 +42,12 @@
                 - Result validations 
                     - Test lables 
                     - Final results
+
+## Usefull reporositories that are important to understand for this projects 
+
+1. [Urdu Corpus Summary](https://github.com/humsha/USCorpus/tree/master/UrduSummaryCorpus)
+2. [Urdu characters](https://github.com/urduhack/urdu-characters)
+3. [Urdu-Word-Segmentation, Python](https://github.com/harisbinzia/Urdu-Word-Segmentation)
+4. [Urdu Chatbot Jupiter Notebook](https://github.com/sirmadhashmi/ChatBot-Urdu-Example/blob/master/ChatBotUrdu.ipynb)
+5. [Collection of Urdu Datasets](https://github.com/mirfan899/Urdu)
+6. [more details about urdu](https://r12a.github.io/scripts/arabic/urdu)
