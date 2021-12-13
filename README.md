@@ -16,7 +16,7 @@
 
 # Steps to Follow 
 1. Corpus Building 
-    - There are presently no corpuses that could meet this studies requirements, that’s why starting from the begining could be a plus
+    - There are presently no corpuses that could meet this studies requirements, that’s why starting from the begining could be a hectic job but for learing purpose this way is a plus point
 2. Target Selection 
     - There is need to find the target of our corpus data, like ethnicity, religious, racism, nationality, casteism,  national Security. Although there are many such categories that can be selected as a domain like previous studies have done but I will choose few of them. 
 
