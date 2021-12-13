@@ -51,3 +51,15 @@
 4. [Urdu Chatbot Jupiter Notebook](https://github.com/sirmadhashmi/ChatBot-Urdu-Example/blob/master/ChatBotUrdu.ipynb)
 5. [Collection of Urdu Datasets](https://github.com/mirfan899/Urdu)
 6. [more details about urdu](https://r12a.github.io/scripts/arabic/urdu)
+
+
+# Aim of this study
+
+
+The focus of this study:
+ Devlop a benchmark corpus that can be used for the identification of hateful content.
+ 
+ There are no generic and standardized guidelines that can be used to detect hatespeech in urdu language.
+ 
+ There is a dire absence of hatespeech dataset in Roman-Urdu dataset, there are few but they are either extracted from hindi datasets or the data is too low to be used to training purposes
+ 
