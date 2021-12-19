@@ -49,3 +49,71 @@ def puncuation_removal(list):
 post = data["Sentence"]
 #new_post = emojis_removal(post)
 #post1 = puncuation_removal(new_post)
+
+
+data_x = post
+data_y = data["Neutral (N) / Hostile (H)"]
+
+
+data_dict = { 
+    
+    "Sentence": data_x,
+    "Neutral (N) / Hostile (H)": data_y,   
+}
+data_new = pd.DataFrame(data_dict)
+
+l = []
+for i in data_y:
+    a = i.split(",")
+    for k in a:
+        l.append(k)
+
+        
+print("Hate", l.count("H"))
+print("Neutral",l.count("N"))
+# print("offensive", l.count("offensive"))
+# print("non-hostile", l.count("non-hostile"))
+# print("defamation", l.count("defamation"))
+# print("fake", l.count("fake"))
+
+
+
+
+df_dict = {
+    "post":data_x,
+    "H":np.zeros(5000),
+    "N":np.zeros(5000)
+#     "non-hostile":np.zeros(5728),
+#     "defamation":np.zeros(5728),
+#     "fake":np.zeros(5728)
+}
+
+
+
+
+df_new = pd.DataFrame(df_dict)
+
+
+
+data_x = post
+data_y = data["Neutral (N) / Hostile (H)"]
+
+
+# len(data_x)
+# len(data_y)
+
+
+for i in range(0,len(data_new["Neutral (N) / Hostile (H)"])):
+    a = data_new["Neutral (N) / Hostile (H)"][i].split(",")
+    for k in a:
+        df_new[k][i] = 1
+
+
+X = df_new["post"]
+ini_array1 = np.array(df_new[df_new.columns[1:]])
+
+
+
+import nltk 
+nltk.download('punkt')
+
