@@ -124,4 +124,14 @@ nltk.download('punkt')
 cv = CountVectorizer(analyzer=stopword_removal,)
 
 tfvetorizar  = cv.fit_transform(X)
-print(tfvetorizar.shape)
+# print(tfvetorizar.shape)
+
+
+df_tfvetorizar= pd.DataFrame(tfvetorizar.toarray(), columns = cv.get_feature_names())
+
+# TF-IDF count vectorizer 
+
+
+tfidf = TfidfVectorizer(analyzer=stopword_removal)
+
+tfidfvetorizar = tfidf.fit_transform(df_new["post"])
