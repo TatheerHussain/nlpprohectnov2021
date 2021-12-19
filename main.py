@@ -135,3 +135,18 @@ df_tfvetorizar= pd.DataFrame(tfvetorizar.toarray(), columns = cv.get_feature_nam
 tfidf = TfidfVectorizer(analyzer=stopword_removal)
 
 tfidfvetorizar = tfidf.fit_transform(df_new["post"])
+
+df_tfidfvetorizar = pd.DataFrame(tfidfvetorizar.toarray(), columns = tfidf.get_feature_names())
+
+
+
+# splitting the data into test train 
+
+X_train,X_test,Y_train,Y_test = train_test_split(df_tfidfvetorizar,ini_array1,test_size=0.33, random_state=88)
+
+
+
+Y = ini_array1.ravel()
+target_data=Y[0:len(Y_train)]
+
+
