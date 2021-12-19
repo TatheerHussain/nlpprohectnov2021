@@ -117,3 +117,11 @@ ini_array1 = np.array(df_new[df_new.columns[1:]])
 import nltk 
 nltk.download('punkt')
 
+
+
+# TF count vectorizor 
+
+cv = CountVectorizer(analyzer=stopword_removal,)
+
+tfvetorizar  = cv.fit_transform(X)
+print(tfvetorizar.shape)
