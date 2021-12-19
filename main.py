@@ -37,3 +37,15 @@ def stopword_removal(new_post):
     tokens = word_tokenize(new_post)
     stopword_remove_row = [word for word in tokens if word not in STOPWORDS]
     return stopword_remove_row
+
+def puncuation_removal(list):
+    list2 = []
+    for i in list:
+        new_str = re.sub(r'[a-zA-Z0-9\n\',.#@_:…।?/|!$*-]', r'',i)
+        list2.append(new_str)
+    return list2
+
+
+post = data["Sentence"]
+#new_post = emojis_removal(post)
+#post1 = puncuation_removal(new_post)
