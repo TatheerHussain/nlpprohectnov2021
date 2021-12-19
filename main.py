@@ -17,3 +17,23 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 
 
+data = pd.read_csv(r'Hate Speech Roman Urdu.csv')
+data.head()
+
+data["Sentence"][0]
+
+STOPWORDS = ['ai','ayi','hy','hai','main','ki','tha','koi','ko','sy','woh','bhi','aur',
+             'wo','yeh','rha','hota','ho','ga','ka','le','lye','kr','kar','lye','liye',
+             'hotay','aisey','gya','gaya','kch','ab','thy','thay','houn','hain','ho','jo',
+             'han','to','is','hi','jo','kya','thi','se','pe','phr','phir','wala','waisay',
+             'us','na','ny','hun','rha','raha','ja','rahay','abi','uski','ne','haan',
+             'acha','nai','ney','ye','sent','photo','you','kafi','gai','rhy','kuch','jata','aye',
+             'ya','dono','hoa','aese','de','wohi','jati','jb','krta','lg','rahi','hui',
+             'karna','krna','gi','hova','yehi','jana','jye','chal','mil','tu','tum','hum','par',
+             'hay','kis','sb','gy','dain','krny','tou']
+
+
+def stopword_removal(new_post):
+    tokens = word_tokenize(new_post)
+    stopword_remove_row = [word for word in tokens if word not in STOPWORDS]
+    return stopword_remove_row
