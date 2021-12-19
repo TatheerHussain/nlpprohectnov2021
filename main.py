@@ -150,3 +150,41 @@ Y = ini_array1.ravel()
 target_data=Y[0:len(Y_train)]
 
 
+# model training using Gussain 
+
+model = GaussianNB()
+model.fit(X_train,target_data)
+
+
+
+expected= target_data
+predicated =model.predict(X_train)
+
+
+print(metrics.classification_report(expected,predicated))
+print(metrics.confusion_matrix(expected,predicated))
+result=model.predict(X_test)
+
+# checking on logistic regression 
+
+model = LogisticRegression()
+model.fit(X_train,target_data)
+expected= target_data
+predicated =model.predict(X_train)
+
+print(metrics.classification_report(expected,predicated))
+
+
+ # checking on KNN
+
+scaler = StandardScaler()
+scaler.fit(X_train)
+knn_classifier = KNeighborsClassifier(n_neighbors = 6)
+knn_classifier.fit(X_train,target_data)
+expected= target_data
+predicated =model.predict(X_train)
+print(metrics.classification_report(expected,predicated))
+
+
+
+
