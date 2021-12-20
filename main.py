@@ -1,3 +1,5 @@
+from json.decoder import JSONDecoder
+from nltk.translate.ribes_score import kendall_tau
 import pandas as pd
 import numpy as np
 import re
@@ -8,6 +10,7 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import model_selection
+from sklearn.metrics.pairwise import kernel_metrics
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn import datasets
@@ -71,10 +74,7 @@ for i in data_y:
         
 print("Hate", l.count("H"))
 print("Neutral",l.count("N"))
-# print("offensive", l.count("offensive"))
-# print("non-hostile", l.count("non-hostile"))
-# print("defamation", l.count("defamation"))
-# print("fake", l.count("fake"))
+
 
 
 
@@ -83,9 +83,6 @@ df_dict = {
     "post":data_x,
     "H":np.zeros(5000),
     "N":np.zeros(5000)
-#     "non-hostile":np.zeros(5728),
-#     "defamation":np.zeros(5728),
-#     "fake":np.zeros(5728)
 }
 
 
@@ -107,7 +104,6 @@ for i in range(0,len(data_new["Neutral (N) / Hostile (H)"])):
     a = data_new["Neutral (N) / Hostile (H)"][i].split(",")
     for k in a:
         df_new[k][i] = 1
-
 
 X = df_new["post"]
 ini_array1 = np.array(df_new[df_new.columns[1:]])
@@ -184,6 +180,7 @@ knn_classifier.fit(X_train,target_data)
 expected= target_data
 predicated =model.predict(X_train)
 print(metrics.classification_report(expected,predicated))
+
 
 
 

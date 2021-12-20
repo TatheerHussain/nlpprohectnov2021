@@ -1,4 +1,4 @@
-# Started new project on 21/11/2021
+# Hate-Speech Detection using Roman-Urdu
 > The idea is to create a new hate speech detection in roman URDU language, that could out perform current systems out there.
 
 ### Technologies to be used
