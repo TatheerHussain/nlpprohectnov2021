@@ -1,5 +1,6 @@
-# Hate-Speech Detection using Roman-Urdu
-> The idea is to create a new hate speech detection in roman URDU language, that could out perform current systems out there.
+# Hate-Speech Detection using Roman-Urdu 
+> The idea is to create a new hate speech detection in roman URDU language, that could out perform current systems out there
+> urdu-roman here means we need to remove the roman-hindi words from our urdu corpus
 
 ### Technologies to be used
 
