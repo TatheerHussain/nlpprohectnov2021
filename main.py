@@ -1,4 +1,5 @@
 from json.decoder import JSONDecoder
+from typing_extensions import _AnnotatedAlias
 from nltk.translate.ribes_score import kendall_tau
 import pandas as pd
 import numpy as np
@@ -7,7 +8,7 @@ import emoji
 import string
 import csv
 from nltk.tokenize import word_tokenize
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, _analyze
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import model_selection
 from sklearn.metrics.pairwise import kernel_metrics
@@ -76,9 +77,6 @@ print("Hate", l.count("H"))
 print("Neutral",l.count("N"))
 
 
-
-
-
 df_dict = {
     "post":data_x,
     "H":np.zeros(5000),
@@ -86,10 +84,7 @@ df_dict = {
 }
 
 
-
-
 df_new = pd.DataFrame(df_dict)
-
 
 
 data_x = post
@@ -102,6 +97,7 @@ data_y = data["Neutral (N) / Hostile (H)"]
 
 for i in range(0,len(data_new["Neutral (N) / Hostile (H)"])):
     a = data_new["Neutral (N) / Hostile (H)"][i].split(",")
+
     for k in a:
         df_new[k][i] = 1
 
@@ -109,7 +105,7 @@ X = df_new["post"]
 ini_array1 = np.array(df_new[df_new.columns[1:]])
 
 
-
+# 
 import nltk 
 nltk.download('punkt')
 
@@ -135,10 +131,10 @@ tfidfvetorizar = tfidf.fit_transform(df_new["post"])
 df_tfidfvetorizar = pd.DataFrame(tfidfvetorizar.toarray(), columns = tfidf.get_feature_names())
 
 
-
 # splitting the data into test train 
 
 X_train,X_test,Y_train,Y_test = train_test_split(df_tfidfvetorizar,ini_array1,test_size=0.33, random_state=88)
+
 
 
 
