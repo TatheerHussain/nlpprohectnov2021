@@ -34,10 +34,9 @@
 
 1. Training the Data
 2. Preprocessing
-3. Tf-Idf
-    - Algorithms (yet to decide)
+3. Mthodology
+    - Algorithms
         - Traning Labels 
-        - Baseline model
             - Test data 
             - Label Predictions 
                 - Result validations 
