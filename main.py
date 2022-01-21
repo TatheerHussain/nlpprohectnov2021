@@ -21,10 +21,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 
 
-data = pd.read_csv(r'Hate Speech Roman Urdu.csv')
+data = pd.read_csv(r'refineddatafile.csv')
 data.head()
 
-data["Sentence"][0]
+data["tweet"][0]
 
 STOPWORDS = ['ai','ayi','hy','hai','main','ki','tha','koi','ko','sy','woh','bhi','aur',
              'wo','yeh','rha','hota','ho','ga','ka','le','lye','kr','kar','lye','liye',
@@ -50,19 +50,19 @@ def puncuation_removal(list):
     return list2
 
 
-post = data["Sentence"]
+post = data["tweet"]
 #new_post = emojis_removal(post)
 #post1 = puncuation_removal(new_post)
 
 
 data_x = post
-data_y = data["Neutral (N) / Hostile (H)"]
+data_y = data["N / H"]
 
 
 data_dict = { 
     
-    "Sentence": data_x,
-    "Neutral (N) / Hostile (H)": data_y,   
+    "tweet": data_x,
+    "N / H": data_y,   
 }
 data_new = pd.DataFrame(data_dict)
 
@@ -79,8 +79,8 @@ print("Neutral",l.count("N"))
 
 df_dict = {
     "post":data_x,
-    "H":np.zeros(5000),
-    "N":np.zeros(5000)
+    "H":np.zeros(4231),
+    "N":np.zeros(4231)
 }
 
 
@@ -88,7 +88,7 @@ df_new = pd.DataFrame(df_dict)
 
 
 data_x = post
-data_y = data["Neutral (N) / Hostile (H)"]
+data_y = data["N / H"]
 
 
 # len(data_x)
